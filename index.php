@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Calculadora de Figuras Geométricas</title>
 </head>
 <body>
-    <form method="post" action="index.php">
-        <label for="tipoFigura">Tipo de figura:</label>
+    <h2>Seleccione el tipo de figura:</h2>
+    <form action="formFigura.php" method="post">
+        <label for="tipoFigura">Tipo de Figura:</label>
         <select name="tipoFigura" id="tipoFigura">
-            <option value="Triangulo">Triángulo</option>
-            <option value="Rectangulo">Rectángulo</option>
             <option value="Cuadrado">Cuadrado</option>
-            <option value="Circulo">Círculo</option>
+            <option value="Triangulo">Triangulo</option>
+            <option value="Circulo">Circulo</option>
+            <option value="Rectangulo">Rectangulo</option>
         </select>
         <br>
-        <label for="lado1">Lado 1:</label>
-        <input type="text" name="lado1" id="lado1" required>
-        <br>
-        <label for="lado2">Lado 2 (solo para Triángulo y Rectángulo):</label>
-        <input type="text" name="lado2" id="lado2">
-        <br>
-        <input type="submit" value="Calcular">
+        <input type="submit" value="Continuar">
     </form>
 </body>
 </html>

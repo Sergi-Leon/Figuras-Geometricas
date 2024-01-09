@@ -1,5 +1,6 @@
 <?php
 interface PerimetroM {
-    public function perimetro();
+    public function calcularPerimetro();
 }
+
 ?>

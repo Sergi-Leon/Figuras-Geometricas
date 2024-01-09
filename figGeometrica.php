@@ -1,4 +1,5 @@
 <?php
+
 abstract class FiguraGeometrica {
     protected $tipoFigura;
     protected $lado1;
@@ -7,6 +8,12 @@ abstract class FiguraGeometrica {
         $this->tipoFigura = $tipoFigura;
         $this->lado1 = $lado1;
     }
+
+    public function __destruct() {
+
+    }
+
+    abstract public function calcularArea();
 
     public function getTipoFigura() {
         return $this->tipoFigura;
@@ -23,7 +30,4 @@ abstract class FiguraGeometrica {
     public function setLado1($lado1) {
         $this->lado1 = $lado1;
     }
-
-    abstract public function area();
 }
-?>

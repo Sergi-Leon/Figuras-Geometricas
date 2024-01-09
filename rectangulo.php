@@ -1,9 +1,12 @@
 <?php
-class Rectangulo extends FiguraGeometrica implements PerimetroM {
-    protected $lado2;
 
-    public function __construct($lado1, $lado2) {
-        parent::__construct("Rectangulo", $lado1);
+include('figGeometrica.php');
+include('perimetro.php');
+class Rectangulo extends FiguraGeometrica implements PerimetroM {
+    private $lado2;
+
+    public function __construct($tipoFigura, $lado1, $lado2) {
+        parent::__construct($tipoFigura, $lado1);
         $this->lado2 = $lado2;
     }
 
@@ -15,18 +18,22 @@ class Rectangulo extends FiguraGeometrica implements PerimetroM {
         $this->lado2 = $lado2;
     }
 
-    public function area() {
-        // Implementa el cálculo del área para un rectángulo
-        // ...
+    public function calcularArea() {
+        // Implementación del área para un rectángulo
+        return $this->getLado1() * $this->lado2;
     }
 
-    public function perimetro() {
-        // Implementa el cálculo del perímetro para un rectángulo
-        // ...
+    public function calcularPerimetro() {
+        // Implementación del perímetro para un rectángulo
+        return 2 * ($this->getLado1() + $this->lado2);
     }
 
     public function toString() {
-        return "Tipo de figura: " . $this->getTipoFigura() . ", Lado1: " . $this->getLado1() . ", Lado2: " . $this->getLado2();
+        return "Figura de tipo {$this->getTipoFigura()}. Lado 1 = {$this->getLado1()}, Lado 2 = {$this->lado2}";
     }
 }
-?>
+
+$rectangulo1 = new Rectangulo("Rectángulo", 5, 8);
+echo $rectangulo1->toString() . ".\n";
+echo "Área del rectángulo: " . $rectangulo1->calcularArea() . ".\n";
+echo "Perímetro del rectángulo: " . $rectangulo1->calcularPerimetro() . ".\n";
