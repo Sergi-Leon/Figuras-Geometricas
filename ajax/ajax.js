@@ -1,11 +1,14 @@
 function cambiarFormulario() {
     var tipoFigura = document.getElementById("tipoFigura").value;
 
+    var formdata = new FormData();
+    formdata.append('tipoFigura', tipoFigura);
+
     // Crear una instancia de XMLHttpRequest
     var xhr = new XMLHttpRequest();
 
     // Configurar la solicitud
-    xhr.open("GET", "../php/obtenerFormulario.php?tipoFigura=" + tipoFigura, true);
+    xhr.open("POST", 'http://localhost/daw2/M12/FiguraGeometrica/php/obtenerFormulario.php', true);
 
     // Configurar la función de devolución de llamada cuando la solicitud esté completada
     xhr.onreadystatechange = function () {
@@ -16,5 +19,5 @@ function cambiarFormulario() {
     };
 
     // Enviar la solicitud
-    xhr.send();
+    xhr.send(formdata);
 }

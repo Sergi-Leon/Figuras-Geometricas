@@ -1,9 +1,7 @@
 <?php
-
-$tipoFigura = $_GET['tipoFigura'];
+$tipoFigura = $_POST['tipoFigura'];
 
 // Lógica para generar el formulario según el tipo de figura
-$formularioGenerado = '';
 
 if ($tipoFigura === 'cuadrado') {
     $formularioGenerado = '
