@@ -9,14 +9,14 @@
     <h2>Seleccione el tipo de figura:</h2>
     <form id="formFigura">
         <label for="tipoFigura">Tipo de Figura:</label>
-        <select name="tipoFigura" id="tipoFigura">
+        <select name="tipoFigura" id="tipoFigura" onchange="cambiarFormulario()">
             <option value="cuadrado">Cuadrado</option>
             <option value="triangulo">Triangulo</option>
             <option value="circulo">Circulo</option>
             <option value="rectangulo">Rectangulo</option>
         </select>
         <br>
-        <input type="button" value="Continuar" onclick="obtenerFormulario()">
+        <div id="formularioContainer"></div>
     </form>
 </body>
 </html>
