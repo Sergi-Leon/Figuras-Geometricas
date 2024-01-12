@@ -33,10 +33,4 @@ class Cuadrado extends FiguraGeometrica implements PerimetroM {
     }
 }
 
-// Ejemplo de uso:
-$cuadrado1 = new Cuadrado("Cuadrado", 3);
-echo $cuadrado1->toString() . ".\n";
-echo "Área del cuadrado: " . $cuadrado1->calcularArea() . ".\n";
-echo "Perímetro del cuadrado: " . $cuadrado1->calcularPerimetro() . ".\n";
-
 ?>

@@ -32,8 +32,3 @@ class Rectangulo extends FiguraGeometrica implements PerimetroM {
         return "Figura de tipo {$this->getTipoFigura()}. Lado 1 = {$this->getLado1()}, Lado 2 = {$this->lado2}";
     }
 }
-
-$rectangulo1 = new Rectangulo("Rectángulo", 5, 8);
-echo $rectangulo1->toString() . ".\n";
-echo "Área del rectángulo: " . $rectangulo1->calcularArea() . ".\n";
-echo "Perímetro del rectángulo: " . $rectangulo1->calcularPerimetro() . ".\n";

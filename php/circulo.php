@@ -35,10 +35,4 @@ class Circulo extends FiguraGeometrica implements PerimetroM {
     }
 }
 
-// Ejemplo de uso:
-$circulo1 = new Circulo("Círculo", 5);
-echo $circulo1->toString() . ".\n";
-echo "Área del círculo: " . $circulo1->calcularArea() . ".\n";
-echo "Perímetro del círculo: " . $circulo1->calcularPerimetro() . ".\n";
-
 ?>

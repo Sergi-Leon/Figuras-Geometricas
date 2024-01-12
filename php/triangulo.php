@@ -28,8 +28,7 @@ class Triangulo extends FiguraGeometrica implements PerimetroM {
         $hipotenusa = sqrt(pow($this->lado1, 2) + pow($this->lado2, 2));
         return $this->lado1 + $this->lado2 + $hipotenusa;
     }
+    public function toString() {
+        return "Figura de tipo {$this->getTipoFigura()}. Lado 1 = {$this->getLado1()}, Lado 2 = {$this->lado2}";
+    }
 }
-
-$triangulo1 = new Triangulo("Triángulo", 5, 7);
-echo "Área del triángulo: " . $triangulo1->calcularArea() . "\n";
-echo "Perímetro del triángulo: " . $triangulo1->calcularPerimetro() . "\n";
